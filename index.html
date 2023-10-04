@@ -1,32 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathBag</title>
-    <link href="./styles.css" rel="stylesheet"/>
-</head>
-<body>
-    <img src="./images/RafaBag.png"/>
-    <header class="header">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VirtualBag</title>
+        <link href="./styles.css" rel="stylesheet"/>
+    </head>
+    <body>
+    
+        <header class="header">
+            <a class="bag" href="#"><img/></a>
+            <a class="perfil" href="#"><img/></a>
+            <a class="distancia" href="#"><img/></a>
+        </header>
+
+        <form id="adicionaCategoria">
+            <h1>Adicionar Item na lista:</h1>        
+            <select>
+                <option class="saopaulo">sao paulo</option>
+                <option class="riodejaneiro">rio de janeiro</option>
+            </select>
+            <input type="submit" value="+"/>
+        </form>
+
+
         <form id="adicionaItem">
-            <label for="item">Adicionar item</label>
+            <label for="item">Produto</label>
             <input type="text" name="nome" id="nome"/>
-            <label for="quantidade">Adicionar Quantidade</label>
+            <label for="quantidade">Quantidade</label>
             <input type="number" name="quantidade" id="quantidade"/>
+            <label for="categoria">Categoria</label>
+            <input type="text" name="categoria" id="categoria"/>
             <input type="submit" value="Adicionar"/>
         </form>
-    </header>
 
-    <ul class="lista" id="lista">
-        <li id="item"><strong id="quantidade">12</strong>Camisa</li>
-    </ul>
-
-
-
+        <main class="main">
+            <ul class="lista" id="lista">
+                
+            </ul>
+        </main>
 
 
 
-    <script src="main.js"></script>
-</body>
+
+        <footer class="footer">
+            <p>Todos os direitos reservados para &lt;/Math&gt;</p>
+            <img src="./images/M_Logo Reduzido.png"/>
+        </footer>
+        <script src="main.js"></script>
+    </body>
 </html>

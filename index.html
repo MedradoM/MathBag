@@ -7,13 +7,19 @@
         <link href="./styles.css" rel="stylesheet"/>
     </head>
     <body>
-    
-        <header class="header">
-            <a class="bag" href="#"><img/></a>
-            <a class="perfil" href="#"><img/></a>
-            <a class="distancia" href="#"><img/></a>
-        </header>
+        
+        <aside class="header">
+            <div class="header__menu">
+                <img class="add" src="./images/add.png"/>
+                <img class="bag" src="./images/bag.png"/>
+                <img class="user" src="images/user.png"/>
+            </div>
+            <div class="header__config">
+                <img class="config" src="./images/config.png"/>
+            </div>
+        </aside>
 
+        <main>
         <form id="adicionaCategoria">
             <h1>Adicionar Item na lista:</h1>        
             <select>
@@ -24,15 +30,48 @@
         </form>
 
 
-        <form id="adicionaItem">
-            <label for="item">Produto</label>
-            <input type="text" name="nome" id="nome"/>
-            <label for="quantidade">Quantidade</label>
-            <input type="number" name="quantidade" id="quantidade"/>
-            <label for="categoria">Categoria</label>
-            <input type="text" name="categoria" id="categoria"/>
-            <input type="submit" value="Adicionar"/>
-        </form>
+        <section class="tabela">
+            <form id="adicionaItem">
+                <div class="produto">
+                    <label for="item">Produto</label>
+                    <input type="text" name="nome" id="nome" placeholder="Ex: Escova"/>
+                </div>
+
+                <div class="quantidade">
+                    <label for="quantidade">Quantidade</label>
+                    <input type="number" name="quantidade" id="quantidade"/>
+                </div>
+
+                <div class="categoria">
+                    <div class="categoria__primeira">
+                    <label for="categoria">Categoria</label>
+                    <select name="categoria" id="categoria">
+                            <option value="roupa">roupa</option>
+                            <option value="eletronico">eletronico</option>
+                    </select>
+                    </div>
+                </div>
+                <input type="submit" value="Adicionar" class="enviar"/>
+            </form>
+            <button class="aumentar">+</button>
+            <div id="expor">
+                <table>
+                    <div class="show">
+                        <h4>sao paulo</h4>
+                        <h4>ultimas adições</h4>
+                    </div>
+
+                    <thead>
+                        <th>produto</th>
+                        <th>quantidade</th>
+                        <th>categoria</th>
+                    </thead>
+                    <tbody class="lista" id="lista"></tbody>
+
+
+                </table>
+            </div>
+        </section>
         <!-- //////////////////////////////////////////// 
         <main class="main">
             <ul class="lista" id="lista">
@@ -40,32 +79,17 @@
             </ul>
         </main>
         //////////////////////////////////////////// -->
+
+
+
         
-
-        <div id="expor">
-            <table>
-                <div class="show">
-                    <h4>sao paulo</h4>
-                    <h4>ultimas adições</h4>
-                </div>
-
-                <thead>
-                    <th>produto</th>
-                    <th>quantidade</th>
-                    <th>categoria</th>
-                </thead>
-                <tbody class="lista" id="lista"></tbody>
-
-
-            </table>
-        </div>
          
 
-
-        <footer class="footer">
-            <p>Todos os direitos reservados para &lt;/Math&gt;</p>
+        </main>
+        <!-- <footer class="footer">
+            <p>Todos os direitos reservados</p>
             <img src="./images/M_Logo Reduzido.png"/>
-        </footer>
-        <script src="main.js"></script>
+        </footer> -->
+        <script src="./script/main.js"></script>
     </body>
 </html>

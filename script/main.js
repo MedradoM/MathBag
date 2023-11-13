@@ -5,9 +5,15 @@ const aumentar = document.getElementsByClassName('aumentar')
 const enviar = document.getElementsByClassName('enviar')
 const storage = JSON.parse(localStorage.getItem('storage')) || []
 
+
 storage.forEach( (element) => {
-    inserir(element.nome, element.quantidade, element.categoria)
+    inserir(element)
 } )
+
+while (storage.lenght > 5){
+    storage.splice(5,1)
+}
+
 
 categoria.addEventListener('submit', (e)=>{
     e.preventDefault()
@@ -24,7 +30,6 @@ adicionaItem.addEventListener('submit', (e)=>{
     const quantidade = e.target.elements['quantidade']
     const categoria = e.target.elements['categoria']
         
-    console.log(e)
     
     const string = {
         "nome" : nome.value,
@@ -34,40 +39,43 @@ adicionaItem.addEventListener('submit', (e)=>{
 
     storage.push(string)
     
+    inserir(string)
     localStorage.setItem("storage", JSON.stringify(storage))
-    
-    inserir(string.nome, string.quantidade, string.categoria)
     
     nome.value = "", quantidade.value = "", categoria.value = ""
 })
    
 
 
-
-
-
-
-function inserir (nome, quantidade, categoria){
+function inserir (item){
     const criaTr = document.createElement('tr')
     const namezin = document.createElement('td')
     const numzin = document.createElement('td')
     const cat = document.createElement('td')
+    criaTr.classList.add("item")
+     
+    cat.innerHTML = item.categoria
+    numzin.innerHTML = item.quantidade
+    namezin.innerHTML = item.nome
+
+    criaTr.appendChild(numzin)
+    criaTr.appendChild(namezin) 
+    criaTr.appendChild(cat)
+    criaTr.appendChild(limpar(item.id))
+    lista.appendChild(criaTr)
+}
+
+function limpar (id) {
     const deleta = document.createElement('button')
     deleta.innerHTML = "X"
 
+    deleta.addEventListener('click', ()=>{
+       deleta.parentElement.remove();
 
-    deleta.addEventListener('click', (e)=>{
-        console.log(this.storage)
+       storage.splice(storage.findIndex(elemento => elemento.id === id), 1)
+       localStorage.setItem("storage", JSON.stringify(storage))
     })
-     
-    cat.innerHTML = categoria
-    numzin.innerHTML = quantidade
-    namezin.innerHTML = nome
-     
-    criaTr.appendChild(namezin) 
-    criaTr.appendChild(numzin)
-    criaTr.appendChild(cat)
-    criaTr.appendChild(deleta)
-    lista.appendChild(criaTr)
+    return deleta;
 }
+
 

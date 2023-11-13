@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" color-mode="white">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,23 +10,32 @@
         
         <aside class="header">
             <div class="header__menu">
-                <img class="add" src="./images/add.png"/>
-                <img class="bag" src="./images/bag.png"/>
-                <img class="user" src="images/user.png"/>
+                <a href="index.html"><img class="add" src="./images/add.png"/></a>
+                <a href="lista.html"><img class="dda" src="./images/bag.png"/></a>
             </div>
             <div class="header__config">
-                <img class="config" src="./images/config.png"/>
+                <img onclick="openPopup()" class="config" src="./images/config.png"/>
+
+                <div id="popup" class="popup">
+                    <div class="popup-content">
+                        <span class="close" onclick="closePopup()">&times;</span>
+                        <h1>Configurações</h1>
+                        <div>
+                            <a id="blk__wth" class="darkmode">
+                                <img src="http://matheusmassena.com/images/moon.png"/>
+                                <p class="blk__wth_p">Darkmode</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </aside>
 
         <main>
         <form id="adicionaCategoria">
             <h1>Adicionar Item na lista:</h1>        
-            <select>
-                <option class="saopaulo">sao paulo</option>
-                <option class="riodejaneiro">rio de janeiro</option>
-            </select>
-            <input type="submit" value="+"/>
+            
         </form>
 
 
@@ -46,50 +55,39 @@
                     <div class="categoria__primeira">
                     <label for="categoria">Categoria</label>
                     <select name="categoria" id="categoria">
-                            <option value="roupa">roupa</option>
-                            <option value="eletronico">eletronico</option>
+                            <option value="roupa">Roupa</option>
+                            <option value="eletronico">Eletrônico</option>
+                            <option value="comida">Comida</option>
+                            <option value="higiene">Higiene</option>
+                            <option value="acessorio">Acessório</option>
+                            <option value="outros">Outros</option>
                     </select>
                     </div>
                 </div>
                 <input type="submit" value="Adicionar" class="enviar"/>
             </form>
-            <button class="aumentar">+</button>
             <div id="expor">
-                <table>
-                    <div class="show">
-                        <h4>sao paulo</h4>
-                        <h4>ultimas adições</h4>
-                    </div>
-
+                <div class="show">
+                    <h3>Últimas adições</h3>
+                </div>
+                <table class="tables">
                     <thead>
-                        <th>produto</th>
-                        <th>quantidade</th>
-                        <th>categoria</th>
+                        <tr>
+                            <th>Quantidade</th>
+                            <th>Produto</th>
+                            <th>Categoria</th>
+                            <th>Deleta</th>
+                        </tr>
                     </thead>
                     <tbody class="lista" id="lista"></tbody>
-
-
                 </table>
             </div>
         </section>
-        <!-- //////////////////////////////////////////// 
-        <main class="main">
-            <ul class="lista" id="lista">
-                
-            </ul>
-        </main>
-        //////////////////////////////////////////// -->
-
-
-
-        
-         
 
         </main>
-        <!-- <footer class="footer">
-            <p>Todos os direitos reservados</p>
-            <img src="./images/M_Logo Reduzido.png"/>
-        </footer> -->
+       
+        <script src="script/blk_wth.js"></script>
+        <script src="./script/popup.js"></script>
         <script src="./script/main.js"></script>
     </body>
 </html>

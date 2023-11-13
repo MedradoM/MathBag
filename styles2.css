@@ -74,140 +74,19 @@ body{
 
 /*------------------------------------------------------------------------------------------------*/
 
-#adicionaCategoria{
-    display: flex;
-    padding: 74px;
-    align-items: center;
-    gap: 1%;
-}
-
-#adicionaCategoria select{
-    border-radius: 18px;
-    width: 220px;
-    height: 36px;
-    background-color: var(--element-color);
-    color: var(--second-color);
-    font-size: 20px;
-}
-
-#adicionaCategoria input{
-    padding: 10px 22px;
-    border-radius: 18px;
-    border: var(--element-color) solid 1px;
-    cursor: pointer;
-}
-/*------------------------------------------------------------------------------------------------*/
-
 .listacompleta{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-main{
-    margin: 0 5%;
-}
-
-.tabela{
-    display: flex;
-    justify-content: space-around;
-}
-
-#adicionaItem{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 65px;
-}
-
-
-.produto{
-    width: 360px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.categoria{
-    width: 360px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.categoria button{
-    width: 50px; height: 50px;
-    border-radius: 18px;
-    border: 1px var(--element-color) solid;
-    cursor: pointer;
-}
-
-.quantidade input,
-.produto input,
-.categoria select{
-    color: var(--element-color);
-    width: 220px;
-    height: 50px;
-    border-radius: 18px;
-    border: var(--element-color) solid 1px;
-    background-color: var(--second-color);
-}
-
-input{
-    color: var(--element-color);
-}
-
-.enviar{
-    margin-left: 100%;
-    width: 96px;
-    height: 31px;
-    border-radius: 12px;
-    background-color: var(--element-color);
-    color: var(--text-color);
-    border-color: var(--element-color);
-}
-
-#expor{
-    display: flex;
-    flex-direction: column;
-    width: 432px;
-    height: 327px;
-    flex-shrink: 0;
-    background-color: var(--second-color);
-    padding: 12px;
-    border-radius: 12px;
-}
-
-.show{
-    display: flex;
-    justify-content: center;
-}
-
-.tables{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
     gap: 10px;
+    font-size: 25px;
 }
 
 .lista{
-    gap: 8px;
     display: flex;
-    flex-direction: column-reverse;
-}
-
-.tebelona{
-    display: flex;
-    flex-direction: column;   
-}
-
-thead tr th{
-    width: 25%;
-    padding: 8px;
-}
-
-td{
-    width: 25%;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
 }
 
 .item{
@@ -215,10 +94,15 @@ td{
     align-items: center;
     display: flex;
     justify-content: space-around;
-    gap: 20px;
-    border-bottom: var(--text-color) 1px solid;
+    gap: 300px;
+    background-color: var(--second-color);
+    border-radius: 10px;
     text-align: center;
     padding: 8px;
+}
+
+td{
+    width: 25%;
 }
 
 tr button{
@@ -226,25 +110,6 @@ tr button{
     color: white;
     padding: 2px;
     width: 25%;
-}
-
-
-
-/*------------------------------------------------------------------------------------------------*/
-
-footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-footer img{
-    width: 60px;
 }
 
 /*-----------------------------------------------------------*/

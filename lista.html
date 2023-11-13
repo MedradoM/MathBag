@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br" color-mode="white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Completa</title>
+    <link href="./styles2.css" rel="stylesheet"/>
+</head>
+<body>
+    <aside class="header">
+        <div class="header__menu">
+            <a href="index.html"><img class="dda" src="./images/add.png"/></a>
+            <a href="lista.html"><img class="add" src="./images/bag.png"/></a>
+        </div>
+        <div class="header__config">
+            <img onclick="openPopup()" class="config" src="./images/config.png"/>
+
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup()">&times;</span>
+                    <h1>Configurações</h1>
+                    <div>
+                        <a id="blk__wth" class="darkmode">
+                            <img src="http://matheusmassena.com/images/moon.png"/>
+                            <p class="blk__wth_p">Darkmode</p>
+                        </a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </aside>
+
+    <main class="listacompleta">
+        <h1>Lista Completa</h1>
+        <table class="tabelona">
+            <!-- <thead>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Categoria</th>
+                <th>Delete</th>
+            </thead> -->
+            <tbody class="lista" id="lista"></tbody>
+        </table>
+    </main>
+
+
+
+    
+    <script src="script/blk_wth.js"></script>
+    <script src="script/popup.js"></script>
+    <script src="./script/main.js"></script>
+</body>
+</html>
